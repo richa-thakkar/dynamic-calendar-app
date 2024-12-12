@@ -1,0 +1,170 @@
+  /* @tailwind base;
+@tailwind components;
+@tailwind utilities;   */
+
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day {
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.day.has-event {
+  background-color: #d1f7c4;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-grid div {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-list .event-item {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+}
+ */
+
+
+ /* Calendar Container Styles */
+.calendar {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Header Styles */
+.header {
+  margin-bottom: 20px;
+}
+
+.header button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header button:hover {
+  background-color: #45a049;
+}
+
+/* Calendar Grid */
+.grid {
+  gap: 8px;
+}
+
+.day {
+  min-height: 100px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.day:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Styles */
+.event-item {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.event-item:hover {
+  transform: translateX(4px);
+}
+
+.event-item h4 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Modal Styles */
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  z-index: 1000;
+}
+
+.modal input, .modal textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Export Buttons */
+.btn-outline {
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  background: transparent;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin: 8px;
+}
+
+.btn-outline:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calendar-page {
+    flex-direction: column;
+  }
+  
+  .calendar, .highlights-section {
+    width: 100% !important;
+  }
+}
